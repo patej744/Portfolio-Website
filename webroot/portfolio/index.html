@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Holiday Destinations</title>
+		<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+		<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="jquery.dropotron-1.0.js"></script>-->
+
+		<script language="javascript" type="text/javascript">
+			var timerid = 0;
+			var images = new Array(	"holiday1.jpg",
+						"holiday2.jpg",
+						"holiday3.jpg");
+			var countimages = 0;
+			function startTime()
+			{
+				if(timerid)
+				{
+					timerid = 0;
+				}
+				var tDate = new Date();
+				if(countimages == images.length)
+				{
+					countimages = 0;
+				}
+				if(tDate.getSeconds() % 5 == 0)
+				{
+					document.getElementById("holiday1.jpg").src = images[countimages];
+				}
+				countimages++;
+				timerid = setTimeout("startTime()", 1000);
+			}
+			</script>
+	</head>
+	<body onload="startTime();">
+	<div id="wrapper">
+		<div id="header-wrapper">
+			<div id="header">
+				<div id="img">
+					<img src="me.jpg" alt="profile picture"height="200" width="150" >
+				</div>
+				<div id="logo">
+					<h1>
+					<a href="#"><ins>Jay Patel</ins></a></h1>
+					<br>
+					<p>Personal Portfolio</p>
+				</div>
+			</div>
+		</div>
+		<div id="nav">
+			<ul id="menu">
+				<span/>
+				<li><a href="#"><span>Homepage</span></a></li>
+				<li><a href="#"><span>Personal Projects</span></a></li>
+				<li><a href="#"><span>Resume</span></a></li>
+				<li><a href="#"><span>Social Media</span></a></li>
+				<li><a href="#"><span>Links</span></a></li>
+				<li><a href="#"><span>Contact</span></a></li>
+			</ul>
+		</div>
+		
+		
+		<div id="splash"><img src="holiday1.jpg" alt="Holiday location" height="300" width="980" id="holiday1.jpg" src="holiday3.jpg" />
+		</div>
+
+		<div id="page">
+			<div id="content">
+				<div class="contentbg">
+					<div class="post">
+						<h3 class="title">Welcome to the home of the best destinations in the world.</h3>
+					</div>
+					<div id="post-text">
+						<p><font size="4">We are Holiday destinations. We provide the most palatile locations for our emptors. Our website renders an array of many exotic and tropical holidays. We also provide both traditional and cultural destinations to fit the broad range of users' choices.</font></p>
+					</div>
+					<div class="post">
+						<h3 class="title">Why choose us.</h3>
+					</div>
+					<p>
+				</div>
+			</div>
+			<div id="sidebar-bg">
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>Skills</h2>
+						</li>
+						<li>
+							<h2>Hobbies</h2>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>Designed by: Jay Patel</p>
+	</div>
+	</body>
+</html>

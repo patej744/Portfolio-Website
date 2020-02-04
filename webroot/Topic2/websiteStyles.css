@@ -1,0 +1,11 @@
+#menu {
+	background-color:silver;
+}
+
+p, ul {
+	background-color: green;
+}
+
+ul a{
+	color: orange;
+}
