@@ -138,7 +138,7 @@ footer {
 	margin-left: 40px;
 }
 
-.content-block a:hover {
+/*.content-block a:hover {
 	background: #379683;
 	color: #FFFFFF;
 }
@@ -149,5 +149,35 @@ footer {
 
 .content-block li{
 	padding-bottom: 5px;
+}*/
+
+#footer p, #footer a {
+	color: white;
+	display: inline;
+	text-decoration: none;
+	margin: 0px;
+	border-radius: 5px;
+	padding: 10px 10px 10px 10px;
+	margin-left: 20px;
 }
 
+#footer p {
+	padding-bottom: 10px;
+}
+
+#footer a:hover {
+	background: #379683;
+	color: #FFFFFF;
+}
+
+#footer h3{
+	padding-bottom: 10px;
+}
+
+#footer li{
+	padding-bottom: 5px;
+}
+
+#end-name {
+	margin-top: 15px;
+}
