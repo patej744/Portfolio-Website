@@ -1,4 +1,4 @@
-body, fieldset, html, head, label, title, legend, option, select, input, datalist,  br, form{
+body, fieldset, button, html, head, label, title, legend, option, select, input, datalist,  br, form{
 	margin: 0;
 	padding: 0;
 	border: 0;
