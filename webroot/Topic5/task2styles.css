@@ -41,9 +41,12 @@ aside div li {
 }
 
 img {
-	height: 10em;
-	width: 10em;
+	height: 17em;
+	width: 17em;
+	float: right;
+	margin: -7em 5em;
 }
+
 
 #container {
 	position: relative;
@@ -71,18 +74,17 @@ img {
 	margin: 0.5em 0em 0.5em 0.5em;
 }
 
+#about {
+	width: 40em;
+}
+
 #main {
 	margin-left: 15em;
 	margin-right: 15em;
-}
-
-#about img {
-	float: right;
-	margin-top: -2em;
-	position: static;
 }
 
 #education {
 	border-top: solid 1px black;
 	margin-top: 10em;
 }
+
