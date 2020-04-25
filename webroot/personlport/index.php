@@ -21,6 +21,7 @@
 						<a href="index.html"><strong>Jay Patel</strong></a></h1>
 						<br>
 						<p>Personal Portfolio</p>
+						<p>Date: <?php echo date('l, F jS, Y'); ?> </p>
 					</div>
 				</header>
 			</div>
