@@ -1,0 +1,54 @@
+p {
+	color: grey;
+}
+
+h1 {
+	padding-bottom: 10px;
+	letter-spacing: -2px;
+	font-size: 35px;
+	color: #696969;
+}
+
+aside {
+	overflow: hidden;
+	float: left;
+	clear: left;
+	font-size: 17px;
+	width: 20em;
+}
+
+aside li{
+	color: grey;
+	text-decoration: none;
+	list-style: none;
+	margin: 1em;
+	text-align: center;
+}
+
+aside li p{
+	color: white;
+}
+
+aside a {
+	padding: 5px;
+	border-radius: 5px;
+	color: grey;
+	margin-left: -5px;
+	text-decoration: none;
+}
+
+aside a:hover {
+	background: #CAEBF2;
+	text-decoration: none;
+}
+
+article {
+	margin-top: 20px;
+	margin-left: 22em;
+}
+
+hr {
+	background-color: red;
+	border-width: 1px;
+	margin-left: -1em;
+}

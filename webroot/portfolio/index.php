@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+	session_start();
+?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta name="keywords" content="" />
@@ -9,21 +12,13 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" defer></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" defer></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="reset.css" rel="stylesheet" type="text/css" media="screen" />
 		<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 	</head>
 	<body>
 		<div id="wrapper">
-			<div id="header-wrapper">
-				<header>
-					<div id="logo">
-						<h1>
-						<a href="index.html"><strong>Jay Patel</strong></a></h1>
-						<br>
-						<p>Personal Portfolio</p>
-					</div>
-				</header>
-			</div>
+			<?php include'header.php'?>
 			<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -31,11 +26,11 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<div class="navbar-nav mr-auto">
 						<ul id="menu">
-							<li class="nav-item"><a class="nav-link active" href="index.html">Homepage</a></li>
+							<li class="nav-item"><a class="nav-link active" href="index.php">Homepage</a></li>
 							<li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1AlFjYCqGxsEui1BTA3_5wQ1ZIuPUiHNyA89WhLNpQ1Q/edit?usp=sharing">Resume</a></li>
 							<li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/jay-patel-5aa74b179?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Ba5qnnZxGSf%2BiWERY%2BLdAzA%3D%3D">Social Media</a></li>
-							<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="viewBlog.php">Blog</a></li>
+							<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -47,6 +42,15 @@
 				<aside>
 					<div id="sidebar">
 						<ul>
+							<li id="phpAside">
+								<!-- show logged in msg if only the session varible is set -->
+								<?php  if (isset($_SESSION['username'])) : ?>
+									<p class="bg-dark"> Welcome <?php echo $_SESSION['username'];?>,
+									<br/>
+									<?php echo $_SESSION['success'];?>
+									</p>
+								<?php endif ?>
+							</li>
 							<li>
 								<h2>Skills</h2>
 								<ul>
@@ -81,6 +85,11 @@
 									<li><a href="#education">Education</a></li>
 									<li><a href="#workexperiance">Work Experience</a></li>
 									<li><a href="#personalpro">Personal Projects</a></li>
+									<li>
+										<?php  if (isset($_SESSION['username'])) : ?>
+											<a href="logout.php">Logout</a>
+										<?php endif ?>
+									</li>
 								</ul>
 							</li>
 						</ul>
@@ -234,7 +243,5 @@
 			</main>
 		</div>
 	</body>
-	<div id="footer">
-		<p>Designed by: Jay Patel</p>
-	</div>
+	<?php include 'footer.php'?>
 </html>
