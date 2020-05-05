@@ -54,7 +54,7 @@
 					<li>
 						<!-- if logged in, link to add blog page else redirect to login page -->
 						<?php  if (isset($_SESSION['success'])) : ?>
-							<a href="addPost.html">Add new blog</a>
+							<a href="addPost.php">Add new blog</a>
 						<?php endif ?>
 						<?php  if (!isset($_SESSION['success'])) : ?>
 							<a href="login.html">Add new blog</a>
@@ -69,7 +69,7 @@
 				</aside>
 				<article>
 					<?php
-						$conn = new mysqli("10.130.17.62", "blogs", "password", "ecs417");
+						$conn = new mysqli("10.130.17.62", "user", "password", "ecs417");
 						// Checks connection
 						if ($conn->connect_error) {
 						 	die("Connection failed: " . $conn->connect_error); 
@@ -86,7 +86,7 @@
 							$blogDate = $result ['blogDate'];
 							$blogTime = $result ['blogTime'];
 							echo "<h1>". "$blogTitle" ."</h1>";
-							echo "<p class='far'>&#xf017; " . date('jS F Y, ', strtotime($blogDate));
+							echo "<p class='fa fa-clock-o' aria-hidden='true'> " . date('jS F Y, ', strtotime($blogDate));
 							echo date('G:i T', strtotime($blogTime)) . "</p>" . "<br/>";
 							echo "$blogDetails" ."<br/>";
 							echo "<hr/>";

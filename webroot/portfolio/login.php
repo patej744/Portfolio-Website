@@ -21,7 +21,7 @@
 			$name = mysqli_fetch_array(mysqli_query($conn, "SELECT firstName, lastName FROM users WHERE email='$email'"));
 			$_SESSION['username'] = $name[0] . " " . $name[1];
 			$_SESSION['success'] = "You are now logged in.";
-			header('location: addPost.html');
+			header('location: addPost.php');
 		}else {
 			?>
 			<title>Error</title>
