@@ -2,7 +2,7 @@
 	session_start(); 
 
 	// Creates connection
-	$conn = new mysqli("10.130.17.62", "user", "password", "ecs417");
+	$conn = new mysqli("10.130.17.62", "blogs", "password", "ecs417");
 	// Checks connection
 	if ($conn->connect_error) {
 	 	die("Connection failed: " . $conn->connect_error); 
