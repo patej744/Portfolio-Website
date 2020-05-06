@@ -16,11 +16,9 @@
 		// receive all input values from the form
 		$title = $_POST['title'];
 		$blogDetails = $_POST['blogDetails'];
-		$curDate = date('Y-m-d');
-		$curTime = date('g:i T');
 		//Insert data from form into database
 		$sql = "INSERT INTO `blogs` (blogTitle, blogDetails, blogDate, blogTime)
-					VALUES ('$title', '$blogDetails', '$curDate', '$curTime')";
+					VALUES ('$title', '$blogDetails', curDate(), curTime())";
 		$conn->query($sql);
 		header('Location: viewBlog.php');
 	}
