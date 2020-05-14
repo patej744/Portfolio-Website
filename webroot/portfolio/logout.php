@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	session_unset();
 	session_destroy();
-	header('Location: viewBlog.php');
+	header('Location:' .$_SERVER['HTTP_REFERER']);
 ?>

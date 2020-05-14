@@ -12,15 +12,16 @@ function postPost(form) {
 	var content = form.blogDetails.value;
 
 	if(title == '') {
-		document.getElementById("title").style.borderColor = "red";
+		//if feild is empty, prevent submission of the form
 		event.preventDefault();
+		document.getElementById("title").style.borderColor = "red";
 	} else {
 		document.getElementById("title").style.borderColor = "white";
 	}
 
 	if(content == '') {
-		document.getElementById("blogDetails").style.borderColor = "red";
 		event.preventDefault();
+		document.getElementById("blogDetails").style.borderColor = "red";
 	} else {
 		document.getElementById("blogDetails").style.borderColor = "white";
 	}
