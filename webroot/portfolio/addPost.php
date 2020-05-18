@@ -53,7 +53,6 @@
 							<li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1AlFjYCqGxsEui1BTA3_5wQ1ZIuPUiHNyA89WhLNpQ1Q/edit?usp=sharing">Resume</a></li>
 							<li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/jay-patel-5aa74b179?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Ba5qnnZxGSf%2BiWERY%2BLdAzA%3D%3D">Social Media</a></li>
 							<li class="nav-item"><a class="nav-link active" href="viewBlog.php">Blog</a></li>
-							<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>
