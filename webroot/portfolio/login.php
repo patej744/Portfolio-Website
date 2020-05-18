@@ -1,6 +1,6 @@
 <?php
 	// Creates connection
-	$conn = new mysqli("10.128.3.69", "user", "password", "ecs417");
+	$conn = new mysqli("10.131.17.96", "user", "password", "ecs417");
 	// Checks connection
 	if ($conn->connect_error) {
 	 	die("Connection failed: " . $conn->connect_error); 
