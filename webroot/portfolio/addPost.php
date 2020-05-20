@@ -14,12 +14,10 @@
 	
 	if (isset($_POST['postButton'])) {
 		// receive all input values from the form
-		$title_r = $_POST['title'];
-		$blogDetails_r = $_POST['blogDetails'];
+		// the addslashes() allows ' to be written without breaking code
+		$title = addslashes($_POST['title']);
+		$blogDetails = addslashes($_POST['blogDetails']);
 
-		// allows ' to be written without breaking code
-		$title = addslashes($title_r);
-		$blogDetails = addslashes($blogDetails_r);
 		//Insert data from form into database
 		$sql = "INSERT INTO `blogs` (blogTitle, blogDetails, blogDate, blogTime)
 					VALUES ('$title', '$blogDetails', curDate(), curTime())";
