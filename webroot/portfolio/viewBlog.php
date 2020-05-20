@@ -69,7 +69,7 @@
 				</aside>
 				<article>
 					<?php
-						$conn = new mysqli("10.131.17.96", "user", "password", "ecs417");
+						$conn = new mysqli(getenv("MYSQL_SERVICE_HOST"), "user", "password", "ecs417");
 						// Checks connection
 						if ($conn->connect_error) {
 						 	die("Connection failed: " . $conn->connect_error); 
